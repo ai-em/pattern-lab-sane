@@ -9,7 +9,6 @@ mkdir -p core
 cp -r ./vendor/pattern-lab/edition-thin/core/server ./core/
 echo "" > ./core/server/index.html
 
-
 # create config
 mkdir -p config
 echo "{\"patternengines\":[\"\\\\PatternLab\\\\PatternEngine\\\\Mustache\\\\PatternEngineRule\"]}" > config/patternengines.json
