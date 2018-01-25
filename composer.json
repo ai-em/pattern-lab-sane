@@ -1,11 +1,18 @@
 {
-    "name": "mikejw/pattern-lab-sane",
-    "description": "An attempt to grok pattern lab.",
-
-    "require": {
-	"pattern-lab/edition-thin": "2.1.0",
-	"pattern-lab/patternengine-mustache": "2.1.0",
-	"pattern-lab/styleguidekit-mustache-default": "3.1.0"
-    },
-    "minimum-stability": "dev"
+  "name": "mikejw/pattern-lab-sane",
+  "description": "An attempt to grok pattern lab.",
+  "require": {
+    "pattern-lab/edition-thin": "2.1.0",
+    "pattern-lab/patternengine-mustache": "2.1.0",
+    "pattern-lab/styleguidekit-mustache-default": "3.1.0"
+  },
+  "scripts": {
+    "post-sane": [
+      ". ./scripts/post_sane.sh"
+    ]
+  },
+  "post-install-cmd": [
+    "@post-sane"
+  ],
+  "minimum-stability": "dev"
 }
