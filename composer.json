@@ -8,11 +8,10 @@
   },
   "scripts": {
     "post-sane": [
-      ". ./scripts/post_sane.sh"
+      "chmod +x scripts/post_sane.sh",
+      "bash scripts/post_sane.sh"
     ],
-    "post-install-cmd": [
-      "@post-sane"
-    ]
+    "post-install-cmd": ["@post-sane"]
   },
   "minimum-stability": "dev"
 }
