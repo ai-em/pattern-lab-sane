@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e292a2b652c9dda6622e38ea5b8b6c1",
+    "content-hash": "7680968b4a6fc77b5edaa307a9acd623",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -407,16 +407,16 @@
         },
         {
             "name": "pattern-lab/styleguidekit-assets-default",
-            "version": "v3.5.2",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pattern-lab/styleguidekit-assets-default.git",
-                "reference": "7c1b51195c17a19cc3e87890b8fb3d8c27f33870"
+                "reference": "b5e64ef1f02ae04859fc2503dc077e5451c84a5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pattern-lab/styleguidekit-assets-default/zipball/7c1b51195c17a19cc3e87890b8fb3d8c27f33870",
-                "reference": "7c1b51195c17a19cc3e87890b8fb3d8c27f33870",
+                "url": "https://api.github.com/repos/pattern-lab/styleguidekit-assets-default/zipball/b5e64ef1f02ae04859fc2503dc077e5451c84a5f",
+                "reference": "b5e64ef1f02ae04859fc2503dc077e5451c84a5f",
                 "shasum": ""
             },
             "type": "patternlab-styleguidekit",
@@ -462,7 +462,7 @@
                 "pattern lab",
                 "styleguide"
             ],
-            "time": "2017-10-31T12:19:46+00:00"
+            "time": "2017-11-06T16:28:22+00:00"
         },
         {
             "name": "pattern-lab/styleguidekit-mustache-default",
@@ -883,6 +883,12 @@
             "package": "pattern-lab/patternengine-mustache"
         },
         {
+            "alias": "3.5.2",
+            "alias_normalized": "3.5.2.0",
+            "version": "dev-develop",
+            "package": "pattern-lab/styleguidekit-assets-default"
+        },
+        {
             "alias": "3.1.0",
             "alias_normalized": "3.1.0.0",
             "version": "dev-develop",
@@ -893,6 +899,7 @@
     "stability-flags": {
         "pattern-lab/core": 20,
         "pattern-lab/patternengine-mustache": 20,
+        "pattern-lab/styleguidekit-assets-default": 20,
         "pattern-lab/styleguidekit-mustache-default": 20
     },
     "prefer-stable": false,
