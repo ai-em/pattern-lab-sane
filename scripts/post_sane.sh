@@ -20,6 +20,12 @@ php ./vendor/bin/pl-console --starterkit --install pattern-lab/starterkit-mustac
 # perform first generate
 php ./vendor/bin/pl-console --generate
 
+# install assets
+cd ./vendor/pattern-lab/styleguidekit-assets-default
+npm install
+bower install
+gulp --copy-dist=.././../../public
+
 # done
 echo ""
 echo "Run server with \"php ./vendor/bin/pl-console --server\""
