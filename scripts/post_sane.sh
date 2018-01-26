@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
 # create/fix console
-cp -r ./vendor/pattern-lab/edition-thin/core/console ./vendor/bin/pl-console
+cp -r ./core/console ./vendor/bin/pl-console
 sed -i .bak 's/$baseDir = __DIR__."\/..\/";/$baseDir = __DIR__."\/..\/..\/";/' ./vendor/bin/pl-console
 
 # create server (routing)
-mkdir -p core
-cp -r ./vendor/pattern-lab/edition-thin/core/server ./core/
 echo "" > ./core/server/index.html
 
 # create config
@@ -17,7 +15,7 @@ echo "styleguideKit: \"pattern-lab/styleguidekit-mustache-default\"" >> config/c
 echo "styleguideKitPath: \"vendor/pattern-lab/styleguidekit-mustache-default\"" >> config/config.yml
 
 # install starter kit
-php ./vendor/bin/pl-console --starterkit --install pattern-lab/starterkit-mustache-materialdesign
+php ./vendor/bin/pl-console --starterkit --install pattern-lab/starterkit-mustache-demo
 
 # perform first generate
 php ./vendor/bin/pl-console --generate
