@@ -5,7 +5,8 @@
     "pattern-lab/core": "dev-develop as 2.8.11",
     "pattern-lab/patternengine-mustache": "dev-develop as 2.1.0",
     "pattern-lab/styleguidekit-assets-default": "dev-develop as 3.5.2",
-    "pattern-lab/styleguidekit-mustache-default": "dev-develop as 3.1.0"
+    "pattern-lab/styleguidekit-mustache-default": "dev-develop as 3.1.0",
+    "pattern-lab/plugin-reload": "dev-master"
   },
   "scripts": {
     "post-sane": [
