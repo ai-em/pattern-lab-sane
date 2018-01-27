@@ -3,3 +3,5 @@
 /core/server/index.html
 /node_modules
 /package-lock.json
+/.idea
+*~
