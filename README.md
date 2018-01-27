@@ -9,7 +9,7 @@ pattern-lab-sane
 Instructions
 ---
 
-* Install composer, bower, gulp and sass
+* Install node, npm, composer, bower, gulp and sass
 * Run `composer install`
 * Run the server
 * Go to http://localhost:8080

@@ -1,3 +1,5 @@
 /public
 /vendor
 /core/server/index.html
+/node_modules
+/package-lock.json
