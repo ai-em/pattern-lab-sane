@@ -19,6 +19,9 @@ echo "styleguideKitPath: \"vendor/pattern-lab/styleguidekit-mustache-default\"" 
 # install starter kit
 php ./vendor/bin/pl-console --starterkit --install pattern-lab/starterkit-mustache-demo
 
+# perform first generate
+php ./vendor/bin/pl-console --generate
+
 # install assets
 cd ./vendor/pattern-lab/styleguidekit-assets-default
 npm install
@@ -34,9 +37,6 @@ awk '/<\/body>/{print "  <script type=\"text\/javascript\" src=\"\/js\/custom.js
     source/_meta/_01-foot.mustache \
     > tmp && mv tmp \
     source/_meta/_01-foot.mustache
-
-# perform first generate
-php ./vendor/bin/pl-console --generate
 
 # done
 echo ""
