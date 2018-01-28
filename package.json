@@ -8,7 +8,8 @@
   "author": "Mike Whiting",
   "license": "",
   "dependencies": {
-    "postcss": "^6.0.16"
+    "postcss": "^6.0.16",
+    "postcss-class-prefix": "^0.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",

@@ -16,6 +16,7 @@ var variables       = require('postcss-css-variables');
 var postcssimport   = require('postcss-import');
 var nested          = require('postcss-nested');
 var cssnext         = require('postcss-cssnext');
+var prefix          = require('postcss-class-prefix');
 
 
 var stylerules = {
@@ -51,6 +52,8 @@ gulp.task('styles', function () {
   // order is important!
   var plugins = [
     postcssimport(),
+    //prefix('we-', { ignore: []}),
+    prefix('we-'),
     autoprefixer({browsers: ['last 5 versions']}),
     variables(),
     rucksack(),
@@ -59,9 +62,9 @@ gulp.task('styles', function () {
     cssnano()
   ];
 
-  return gulp.src('source/css/style.css')
+  return gulp.src('source/scss/style.css')
     .pipe(postcss(plugins, { parser: comment }))
-    .pipe(gulp.dest('public/css'));
+    .pipe(gulp.dest('source/css'));
 });
 
 /*
@@ -94,5 +97,8 @@ gulp.task('sourcemap', ['rename'], function () {
 });
 */
 
-gulp.task('default', gulp.series('generate', 'clean', 'styles'));
-var watcher = gulp.watch('source/**/*', gulp.series('default'));
+//gulp.task('default', gulp.series('generate', 'clean', 'styles'));
+//gulp.task('default', gulp.series('clean', 'styles'));
+gulp.task('default', gulp.series('styles'));
+var watcher = gulp.watch('source/scss/**/*', gulp.series('default'));
+
