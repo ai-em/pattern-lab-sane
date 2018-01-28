@@ -19,11 +19,11 @@
       "bash scripts/post_sane.sh"
     ],
     "post-install-cmd": [
-      "PatternLab\\Installer::postInstallCmd"
+      "PatternLab\\Installer::postInstallCmd",
+      "@post-sane"
     ],
     "post-package-install": [
-      "PatternLab\\Installer::postPackageInstall",
-      "@post_sane"
+      "PatternLab\\Installer::postPackageInstall"
     ]
   },
   "minimum-stability": "dev"
