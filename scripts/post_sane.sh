@@ -20,13 +20,14 @@ echo "styleguideKitPath: \"vendor/pattern-lab/styleguidekit-mustache-default\"" 
 php ./vendor/bin/pl-console --starterkit --install pattern-lab/starterkit-mustache-demo
 
 # add custom javascript (to enable plugin)
-cat ./vendor/pattern-lab/plugin-reload/dist/js/plugin-reload.js >> ./source/js/custom.js
-cat util/jsLoader.js >> source/js/custom.js
-cat util/enableReloadPlugin.js >> source/js/custom.js
-awk '/<\/body>/{print "  <script type=\"text\/javascript\" src=\"\/js\/custom.js\"></script>"}1' \
-    source/_meta/_01-foot.mustache \
-    > tmp && mv tmp \
-    source/_meta/_01-foot.mustache
+#cat ./vendor/pattern-lab/plugin-reload/dist/js/plugin-reload.js >> ./source/js/custom.js
+#cat util/jsLoader.js >> source/js/custom.js
+#cat util/enableReloadPlugin.js >> source/js/custom.js
+#awk '/<\/body>/{print "  <script type=\"text\/javascript\" src=\"\/js\/custom.js\"></script>"}1' \
+#    source/_meta/_01-foot.mustache \
+#    > tmp && mv tmp \
+#    source/_meta/_01-foot.mustache
+
 
 # perform first generate
 php ./vendor/bin/pl-console --generate

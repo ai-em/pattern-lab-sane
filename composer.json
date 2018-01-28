@@ -8,12 +8,22 @@
     "pattern-lab/styleguidekit-mustache-default": "dev-develop as 3.1.0",
     "pattern-lab/plugin-reload": "dev-master"
   },
+  "autoload": {
+    "psr-0": {
+      "PatternLab":   "core/src/"
+    }
+  },
   "scripts": {
     "post-sane": [
       "chmod +x scripts/post_sane.sh",
       "bash scripts/post_sane.sh"
     ],
-    "post-install-cmd": ["@post-sane"]
+    "post-install-cmd": [
+      "PatternLab\\Installer::postInstallCmd"
+    ],
+    "post-package-install": [
+      "PatternLab\\Installer::postPackageInstall"
+    ]
   },
   "minimum-stability": "dev"
 }
