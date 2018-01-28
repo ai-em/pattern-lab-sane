@@ -22,7 +22,8 @@
       "PatternLab\\Installer::postInstallCmd"
     ],
     "post-package-install": [
-      "PatternLab\\Installer::postPackageInstall"
+      "PatternLab\\Installer::postPackageInstall",
+      "@post_sane"
     ]
   },
   "minimum-stability": "dev"
