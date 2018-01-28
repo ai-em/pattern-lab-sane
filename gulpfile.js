@@ -17,6 +17,12 @@ var postcssimport   = require('postcss-import');
 var nested          = require('postcss-nested');
 var cssnext         = require('postcss-cssnext');
 var prefix          = require('postcss-class-prefix');
+var lost            = require('lost');
+var custommedia     = require("postcss-custom-media");
+var each            = require("postcss-each");
+var postcssfor      = require("postcss-for");
+var atvars          = require("postcss-at-rules-variables");
+var conditionals     = require("postcss-conditionals");
 
 
 var stylerules = {
@@ -51,15 +57,21 @@ gulp.task('styles', function () {
 
   // order is important!
   var plugins = [
+
     postcssimport(),
-    //prefix('we-', { ignore: []}),
+    atvars(),
+    each(),
+    conditionals(),
     prefix('we-'),
-    autoprefixer({browsers: ['last 5 versions']}),
+    lost(),
     variables(),
+    postcssfor(),
+    custommedia(),
     rucksack(),
     nested(),
+    autoprefixer({browsers: ['last 3 versions']}),
     //cssnext(),
-    cssnano()
+    //cssnano()
   ];
 
   return gulp.src('source/scss/style.css')
