@@ -1,6 +1,16 @@
 {
   "name": "mikejw/pattern-lab-sane",
   "description": "An attempt to grok pattern lab.",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:ai-em/styleguidekit-assets-default.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:ai-em/plugin-php-reload.git"
+    }
+  ],
   "require": {
     "pattern-lab/core": "dev-develop as 2.8.11",
     "pattern-lab/patternengine-mustache": "dev-develop as 2.1.0",
