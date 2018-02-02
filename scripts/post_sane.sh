@@ -4,7 +4,7 @@ export CWD=`pwd`
 
 # create/fix console
 cp -r ./core/console ./vendor/bin/pl-console
-sed -i .bak 's/$baseDir = __DIR__."\/..\/";/$baseDir = __DIR__."\/..\/..\/";/' ./vendor/bin/pl-console
+sed -i".bak" 's/$baseDir = __DIR__."\/..\/";/$baseDir = __DIR__."\/..\/..\/";/' ./vendor/bin/pl-console
 
 # create server (routing)
 echo "" > ./core/server/index.html
