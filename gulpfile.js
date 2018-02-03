@@ -18,11 +18,11 @@ var nested          = require('postcss-nested');
 var cssnext         = require('postcss-cssnext');
 var prefix          = require('postcss-class-prefix');
 var lost            = require('lost');
-var custommedia     = require("postcss-custom-media");
-var each            = require("postcss-each");
-var postcssfor      = require("postcss-for");
-var atvars          = require("postcss-at-rules-variables");
-var conditionals     = require("postcss-conditionals");
+var custommedia     = require('postcss-custom-media');
+var each            = require('postcss-each');
+var postcssfor      = require('postcss-for');
+var atvars          = require('postcss-at-rules-variables');
+var conditionals     = require('postcss-conditionals');
 
 
 var stylerules = {
@@ -59,13 +59,13 @@ gulp.task('styles', function () {
   var plugins = [
 
     postcssimport(),
+    prefix('we-'),
     atvars(),
     each(),
+    postcssfor(),
     conditionals(),
-    prefix('we-'),
     lost(),
     variables(),
-    postcssfor(),
     custommedia(),
     rucksack(),
     nested(),
