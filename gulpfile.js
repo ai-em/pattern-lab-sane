@@ -59,7 +59,6 @@ gulp.task('styles', function () {
   var plugins = [
 
     postcssimport(),
-    prefix('we-'),
     atvars(),
     each(),
     postcssfor(),
@@ -69,6 +68,7 @@ gulp.task('styles', function () {
     custommedia(),
     rucksack(),
     nested(),
+    prefix('we-'),
     autoprefixer({browsers: ['last 3 versions']}),
     //cssnext(),
     //cssnano()
